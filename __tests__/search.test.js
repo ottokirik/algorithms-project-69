@@ -20,4 +20,8 @@ describe("search testing", () => {
   it("search return all ids with empty query", () => {
     expect(search(docs, "")).toEqual(["doc1", "doc2", "doc3"]);
   });
+
+  it("search works with punctuation marks", () => {
+    expect(search(docs, "pint")).toEqual(["doc1"]);
+  });
 });
