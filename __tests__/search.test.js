@@ -13,8 +13,8 @@ describe("search testing", () => {
     expect(search([], "shoot")).toEqual([]);
   });
 
-  it("search return docs ids with query", () => {
-    expect(search(docs, "shoot")).toEqual(["doc1", "doc2"]);
+  it("search return docs ids with query with relevant metric", () => {
+    expect(search(docs, "shoot")).toEqual(["doc2", "doc1"]);
   });
 
   it("search return all ids with empty query", () => {
